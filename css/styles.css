@@ -98,46 +98,71 @@ blockquote {
 
 /* ---------- Buttons ---------- */
 
-.btn {
-  display: inline-block;
-  padding: 4.5px 15px;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.7;
-  color: var(--black);
+.btn,
+.contact-form button,
+.float-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 28px;
+  font: 600 13px/1.3 var(--font);
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
+  color: var(--black);
   background: var(--peach);
-  border: 1px solid var(--black);
-  border-radius: 50px;
-  transition: background-color 0.2s, color 0.2s;
+  border: 1px solid var(--peach);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .btn:hover,
-.btn:focus-visible {
-  background: var(--black);
+.btn:focus-visible,
+.contact-form button:hover,
+.contact-form button:focus-visible {
   color: var(--peach);
+  background: var(--black);
+  border-color: var(--black);
+  box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible,
+.btn-outline:focus-visible,
+.contact-form button:focus-visible {
+  outline: 2px solid var(--peach);
+  outline-offset: 3px;
 }
 
 .btn-shadow {
-  box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.35);
 }
 
 .btn-sm {
-  font-size: 14px;
-  padding: 4.2px 14px;
+  min-height: 40px;
+  padding: 10px 24px;
+  font-size: 12px;
 }
 
 .btn-outline {
-  display: inline-block;
-  padding: 14.4px 36px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 34px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--peach);
   text-decoration: none;
-  background: var(--black);
-  border: 1px solid var(--peach);
-  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1.5px solid var(--peach);
+  border-radius: 999px;
   transition: background-color 0.2s, color 0.2s;
 }
 
@@ -570,6 +595,9 @@ blockquote {
 }
 
 .cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 24px 16px;
   text-align: center;
   background: rgba(255, 255, 255, 0.82);
@@ -584,7 +612,11 @@ blockquote {
 }
 
 .cta-card p {
-  padding-bottom: 12px;
+  padding-bottom: 16px;
+}
+
+.cta-card .btn {
+  margin-top: auto;
 }
 
 .gbcc {
@@ -928,18 +960,13 @@ a[href^="tel:"] {
 
 .contact-form button {
   margin: 10px 0;
-  padding: 8px 16px;
-  font: 400 15px var(--font);
-  color: var(--black);
-  background: var(--peach);
-  border: 1px solid var(--white);
-  border-radius: 8px;
-  box-shadow: 0 1px 1px 0 var(--black);
-  cursor: pointer;
 }
 
-.contact-form button:hover {
+.contact-form button:hover,
+.contact-form button:focus-visible {
+  color: var(--black);
   background: var(--white);
+  border-color: var(--white);
 }
 
 .contact-form [data-cwd-contact-status] {
@@ -1162,21 +1189,13 @@ a[href^="tel:"] {
   }
 
   .float-book {
-    display: block;
+    display: inline-flex;
     position: fixed;
     left: 50%;
     bottom: 16px;
     z-index: 90;
-    padding: 10px 22px;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--black);
     white-space: nowrap;
-    text-decoration: none;
-    background: var(--peach);
-    border: 1px solid var(--black);
-    border-radius: 50px;
-    box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.5);
     transform: translateX(-50%);
     transition: opacity 0.2s, transform 0.2s;
   }
@@ -1203,8 +1222,8 @@ a[href^="tel:"] {
   }
 
   .btn-outline {
-    font-size: 16px;
-    padding: 10px 28px;
+    font-size: 13px;
+    padding: 11px 24px;
   }
 
   .weight-loss {
