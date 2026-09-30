@@ -623,7 +623,12 @@ blockquote {
   padding: 47px 0;
   background-image: url("https://media.cwd-cdn.com/the-lean-sculpt-lab/images/yourself-bg.jpg");
   background-size: cover;
-  background-position: center right;
+  background-position: left center;
+}
+
+.gbcc .col-3-4 {
+  max-width: 62%;
+  margin-left: auto;
 }
 
 .gbcc p {
@@ -1123,7 +1128,17 @@ a[href^="tel:"] {
 
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: 1fr; }
-  .col-3-4 { max-width: none; }
+  .col-3-4,
+  .gbcc .col-3-4 { max-width: none; }
+
+  .gbcc .col-3-4 { margin-left: 0; }
+
+  .gbcc {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.27), rgba(255, 255, 255, 0.39)),
+      url("https://media.cwd-cdn.com/the-lean-sculpt-lab/images/yourself-bg-mobile.jpg");
+    background-position: center right;
+  }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
