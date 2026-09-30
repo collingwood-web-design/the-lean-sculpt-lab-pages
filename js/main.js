@@ -83,6 +83,23 @@
     }).observe(footerForm);
   }
 
+  var successModal = document.getElementById("success-modal");
+  if (footerForm && successModal && successModal.showModal) {
+    footerForm.addEventListener("cwd-contact:success", function () {
+      footerForm.reset();
+      setTimeout(function () {
+        var status = footerForm.querySelector("[data-cwd-contact-status]");
+        if (status) status.textContent = "";
+      }, 0);
+      successModal.showModal();
+    });
+    successModal.addEventListener("click", function (e) {
+      if (e.target === successModal || e.target.closest("[data-close-modal]")) {
+        successModal.close();
+      }
+    });
+  }
+
   var dateEl = document.querySelector("[data-copyright-date]");
   if (dateEl) {
     dateEl.textContent = new Date().toLocaleDateString("en-US", {

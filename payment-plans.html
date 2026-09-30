@@ -79,8 +79,8 @@
               <input id="cf-name" name="Name" autocomplete="name" required>
               <label for="cf-email">Email *</label>
               <input id="cf-email" name="Email" type="email" autocomplete="email" required>
-              <label for="cf-phone">Phone</label>
-              <input id="cf-phone" name="Phone" type="tel" autocomplete="tel">
+              <label for="cf-phone">Phone *</label>
+              <input id="cf-phone" name="Phone" type="tel" autocomplete="tel" required pattern="[0-9 \(\)\+\.\-]{10,20}" title="Please enter a phone number with area code, e.g. 705-555-1234">
               <label for="cf-message">How can we help you? *</label>
               <textarea id="cf-message" name="How can we help you?" required></textarea>
               <input type="text" name="website" data-cwd-honeypot tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
@@ -109,6 +109,15 @@
     </div>
   </footer>
   <a class="float-book" href="request-a-free-consultation">Book a Free Consultation</a>
+  <dialog class="success-modal" id="success-modal" aria-labelledby="success-title">
+    <button type="button" class="success-modal-close" aria-label="Close" data-close-modal>&times;</button>
+    <div class="success-modal-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+    </div>
+    <h2 id="success-title">Thank you!</h2>
+    <p>Your consultation request has been sent. Our team will be in touch with you shortly.</p>
+    <p class="success-modal-call">Need us sooner? Call <a href="tel:+17058882915">705-888-2915</a></p>
+  </dialog>
   <script src="js/main.js"></script>
   <script src="https://web-production-54a6d.up.railway.app/static/cwd-contact.js"></script>
 </body>

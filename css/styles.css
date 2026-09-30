@@ -185,6 +185,103 @@ blockquote {
   display: none;
 }
 
+/* ---------- Success modal ---------- */
+
+.success-modal {
+  width: min(92vw, 440px);
+  padding: 48px 32px 36px;
+  color: var(--black);
+  text-align: center;
+  background: var(--white);
+  border: 0;
+  border-top: 4px solid var(--peach);
+  border-radius: 14px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
+.success-modal[open] {
+  animation: modal-in 0.3s ease;
+}
+
+.success-modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.success-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  font: 300 28px/1 var(--font);
+  color: var(--black);
+  background: #f1f1f1;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.success-modal-close:hover,
+.success-modal-close:focus-visible {
+  color: var(--peach);
+  background: var(--black);
+}
+
+.success-modal-close:focus-visible {
+  outline: 2px solid var(--peach);
+  outline-offset: 2px;
+}
+
+.success-modal-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  color: var(--black);
+  background: var(--peach);
+  border-radius: 50%;
+}
+
+.success-modal h2 {
+  padding-bottom: 8px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.success-modal p {
+  padding-bottom: 0;
+}
+
+.success-modal-call {
+  margin-top: 18px;
+  padding-top: 16px;
+  font-size: 15px;
+  border-top: 1px solid var(--line);
+}
+
+.success-modal-call a {
+  color: var(--black);
+  font-weight: 600;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -1273,7 +1370,8 @@ a[href^="tel:"] {
 
   .slide,
   .hero-content h2,
-  .hero-content .btn-outline {
+  .hero-content .btn-outline,
+  .success-modal[open] {
     transition: none;
     animation: none;
     opacity: 1;
