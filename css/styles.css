@@ -151,6 +151,15 @@ blockquote {
   padding-top: 24px;
 }
 
+.container > .btn-row {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.float-book {
+  display: none;
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -520,12 +529,21 @@ blockquote {
 }
 
 .intro .intro-image {
-  margin: 20px 0;
+  margin: 20px 0 28px;
   width: 100%;
+  max-width: 640px;
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
 }
 
 .intro .or {
-  margin: 6px 0;
+  margin: 0;
+  padding: 0;
 }
 
 .abdomen {
@@ -552,9 +570,11 @@ blockquote {
 }
 
 .cta-card {
-  padding: 10px;
+  padding: 24px 16px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.82);
   border: 1px solid var(--peach);
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.25);
 }
 
 .cta-card h2 {
@@ -748,6 +768,29 @@ blockquote {
   font-weight: 500;
 }
 
+.faq-heading {
+  margin-top: 40px;
+  padding-bottom: 6px;
+  font-size: 23px;
+  line-height: 1.2;
+  border-bottom: 1px solid var(--peach);
+}
+
+.faq-heading:first-child {
+  margin-top: 0;
+}
+
+/* ---------- Diet plan ---------- */
+
+.media-cap {
+  position: sticky;
+  top: 140px;
+  align-self: start;
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+}
+
 /* ---------- Monitoring ---------- */
 
 .monitoring {
@@ -764,9 +807,66 @@ blockquote {
   display: block;
 }
 
-.consult-text a {
+.consult-text a:not(.btn) {
   color: var(--black);
   font-weight: 500;
+}
+
+a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+.consult-grid {
+  align-items: start;
+}
+
+.form-card {
+  padding: 30px;
+  color: var(--white);
+  background: var(--black);
+  border-top: 3px solid var(--peach);
+}
+
+.price-card {
+  padding: 30px 24px;
+  text-align: center;
+  border: 1px solid var(--peach);
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.25);
+}
+
+.price-label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.price {
+  padding-top: 10px;
+  line-height: 1.2;
+}
+
+.price span {
+  display: block;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.price-sessions {
+  font-weight: 500;
+}
+
+.price-note {
+  margin-top: 16px;
+  padding-top: 16px;
+  font-size: 15px;
+  border-top: 1px solid var(--line);
+}
+
+.intro p,
+.section > .container > p,
+.section > .container > blockquote {
+  max-width: 75ch;
 }
 
 /* ---------- Footer ---------- */
@@ -995,19 +1095,100 @@ blockquote {
   }
 
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .grid-3,
-  .footer-grid { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
   .col-3-4 { max-width: none; }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-map iframe {
+    height: 300px;
+  }
 }
 
 @media (max-width: 767px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+
   .container {
     width: 85%;
+  }
+
+  .header-inner {
+    padding: 10px 0 8px;
+  }
+
+  .logo img {
+    width: 100px;
   }
 
   .hero-home .slides,
   .hero-emsculpt .slides {
     --ratio: 978 / 963;
+  }
+
+  .hero-home .slides {
+    aspect-ratio: auto;
+    height: 100vw;
+    min-height: 400px;
+    max-height: 560px;
+  }
+
+  .hero-content {
+    gap: 14px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-map iframe {
+    height: 250px;
+  }
+
+  .media-cap {
+    position: static;
+    max-height: 420px;
+  }
+
+  .form-card {
+    padding: 24px 20px;
+  }
+
+  .float-book {
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    z-index: 90;
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black);
+    white-space: nowrap;
+    text-decoration: none;
+    background: var(--peach);
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.45);
+    transform: translateX(-50%);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .float-book.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 20px);
+  }
+
+  .footer-bottom {
+    padding-bottom: 76px;
   }
 
   .hero-content {

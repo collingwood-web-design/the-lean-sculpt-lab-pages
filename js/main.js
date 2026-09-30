@@ -75,6 +75,14 @@
     });
   });
 
+  var floatBook = document.querySelector(".float-book");
+  var footerForm = document.getElementById("contact-form");
+  if (floatBook && footerForm && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      floatBook.classList.toggle("is-hidden", entries[0].isIntersecting);
+    }).observe(footerForm);
+  }
+
   var dateEl = document.querySelector("[data-copyright-date]");
   if (dateEl) {
     dateEl.textContent = new Date().toLocaleDateString("en-US", {
