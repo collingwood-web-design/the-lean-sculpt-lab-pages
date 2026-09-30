@@ -1094,6 +1094,7 @@ a[href^="tel:"] {
 
 .social img {
   width: 18px;
+  filter: brightness(0);
 }
 
 .footer-map iframe {
