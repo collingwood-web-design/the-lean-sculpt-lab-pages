@@ -161,8 +161,9 @@ blockquote {
   color: var(--peach);
   text-decoration: none;
   background: rgba(0, 0, 0, 0.55);
-  border: 1.5px solid var(--peach);
+  border: 1px solid var(--peach);
   border-radius: 999px;
+  box-shadow: 0 0 1.5px rgba(234, 187, 146, 0.7), inset 0 0 1.5px rgba(234, 187, 146, 0.5);
   transition: background-color 0.2s, color 0.2s;
 }
 
