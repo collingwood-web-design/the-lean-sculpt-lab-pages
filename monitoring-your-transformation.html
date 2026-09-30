@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      if (!/^https?:$/.test(location.protocol)) return;
+      var p = location.pathname;
+      if (/\.html$/.test(p)) {
+        p = p.replace(/index\.html$/, "").replace(/\.html$/, "");
+        location.replace(p + location.search + location.hash);
+      }
+    })();
+  </script>
+  <title>Monitoring Your Transformation - The Lean Sculpt Lab</title>
+  <meta name="description" content="How The Lean Sculpt Lab monitors your transformation with the Styku 3D body scanner for accurate body measurements and progress tracking.">
+  <link rel="canonical" href="https://theleansculptlab.ca/monitoring-your-transformation">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Lean Sculpt Lab">
+  <meta property="og:title" content="Monitoring Your Transformation - The Lean Sculpt Lab">
+  <meta property="og:description" content="How The Lean Sculpt Lab monitors your transformation with the Styku 3D body scanner for accurate body measurements and progress tracking.">
+  <meta property="og:url" content="https://theleansculptlab.ca/monitoring-your-transformation">
+  <meta property="og:image" content="https://media.cwd-cdn.com/the-lean-sculpt-lab/images/hero-slide-1-mobile.jpg">
+  <link rel="icon" href="https://media.cwd-cdn.com/the-lean-sculpt-lab/images/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./"><img src="https://media.cwd-cdn.com/the-lean-sculpt-lab/images/logo-white.png" alt="The Lean Sculpt Lab" width="304" height="195"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="./">Home</a></li><li class="has-sub"><a href="emsculpt-neo">EMSCULPT NEO</a><button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show EMSCULPT NEO pages"></button><ul class="sub-menu"><li><a href="emsculpt-faq">FAQ</a></li><li><a href="monitoring-your-transformation" aria-current="page">Monitoring Your Transformation</a></li><li><a href="payment-plans">Payment Plans</a></li><li><a href="cost-insurance-coverage">Cost Insurance Coverage</a></li></ul></li><li class="has-sub"><a href="diet-plan">Diet Plan</a><button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show Diet Plan pages"></button><ul class="sub-menu"><li><a href="monitoring-your-transformation" aria-current="page">Monitoring Your Transformation</a></li><li><a href="payment-plans">Payment Plans</a></li></ul></li><li class="nav-cta"><a href="request-a-free-consultation">Request a Free Consultation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="band">
+      <div class="container">
+        <blockquote>
+          <h2>How We Monitor Your Transformation</h2><p>3D Body Scanner</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="monitoring">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <p>At The Lean Sculpt Lab we use Styku&reg; 3D body scanner to accurately monitor your progress.</p>
+            
+          <details class="toggle">
+            <summary>What is a 3D body scanner?</summary>
+            <div class="toggle-body"><p>A 3D body scanner, as the name suggests, scans your body using infrared technology. It captures hundreds of photos and thousands of point locations to stitch them together into a point cloud, creating a uniquely individual 3D model of your body. In the realm of fitness, this data provides precise measurements of an individual&rsquo;s waist, hips, thighs, arms, chest, and height, while also tracking specific weight and its distribution across the body. These scans offer greater accuracy compared to the commonly used Bioelectrical Impedance Analysis, or BIA, which measures the electrical current flow through the body to determine body composition and fat. Also, BIA results can be misleading due to natural variations in factors like water intake and food consumption before testing.</p></div>
+          </details>
+            <div class="btn-row"><a class="btn" href="request-a-free-consultation">Click here to book a Consultation</a></div>
+          </div>
+          <img src="https://media.cwd-cdn.com/the-lean-sculpt-lab/images/styku-body-scan.webp" alt="Styku 3D body scanner and wellness report" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How Does It Work?</h2>
+        <p>&bull; Connect &bull; Meet &bull; Plan &bull; Book &bull;</p>
+        <hr class="divider">
+        <div class="footer-grid">
+          <div>
+            <h2 class="footer-title">Request a Consultation:</h2>
+            <form id="contact-form" class="contact-form">
+              <label for="cf-name">Name *</label>
+              <input id="cf-name" name="Name" autocomplete="name" required>
+              <label for="cf-email">Email *</label>
+              <input id="cf-email" name="Email" type="email" autocomplete="email" required>
+              <label for="cf-phone">Phone</label>
+              <input id="cf-phone" name="Phone" type="tel" autocomplete="tel">
+              <label for="cf-message">How can we help you? *</label>
+              <textarea id="cf-message" name="How can we help you?" required></textarea>
+              <input type="text" name="website" data-cwd-honeypot tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+              <button type="submit">Submit</button>
+              <p data-cwd-contact-status role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="footer-info">
+            <p>The Lean Sculpt Lab is located on the second floor of the beautiful Shipyards Medical Arts Centre in downtown Collingwood.</p>
+            <blockquote>
+              <p>The Shipyards Medical Arts Centre<br>28 Huron St. Suite #201,<br>Collingwood, Ontario, L9Y1C4<br><a href="tel:+17058882915">705-888-2915</a></p>
+            </blockquote>
+            <a class="social" href="https://www.instagram.com/theleansculptlab/" target="_blank" rel="noopener" aria-label="Follow The Lean Sculpt Lab on Instagram"><img src="https://media.cwd-cdn.com/the-lean-sculpt-lab/images/icon-instagram.svg" alt="" width="18" height="18" loading="lazy"></a>
+          </div>
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5691.216726351535!2d-80.215983!3d44.502691!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882a7bd92f14afdf%3A0x48cda700a0f55d8c!2sThe%20Shipyards%20Medical%20Arts%20Centre!5e0!3m2!1sen!2sca!4v1732734137335!5m2!1sen!2sca" title="Map to The Shipyards Medical Arts Centre" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; Copyright <span data-copyright-date>2026</span> &#9474; The Lean Sculpt Lab</p>
+        <p>Designed By: <a href="https://www.collingwoodwebdesign.com/">Collingwood Web Design</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="https://web-production-54a6d.up.railway.app/static/cwd-contact.js"></script>
+</body>
+</html>
