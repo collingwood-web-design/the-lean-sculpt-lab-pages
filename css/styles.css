@@ -142,6 +142,12 @@ blockquote {
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.35);
 }
 
+.btn-secondary {
+  background: transparent;
+  border-color: var(--black);
+  box-shadow: none;
+}
+
 .btn-sm {
   min-height: 40px;
   padding: 10px 24px;
@@ -681,14 +687,8 @@ blockquote {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px 16px;
+  gap: 14px 18px;
 }
-
-.intro .or {
-  margin: 0;
-  padding: 0;
-}
-
 .abdomen {
   background: #010101;
   padding: 24px 0;
@@ -1326,6 +1326,10 @@ a[href^="tel:"] {
 
   .footer-map iframe {
     height: 250px;
+  }
+
+  .intro-actions .btn {
+    width: 100%;
   }
 
   .media-cap {
