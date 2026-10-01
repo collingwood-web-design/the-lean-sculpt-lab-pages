@@ -957,7 +957,7 @@ blockquote {
 }
 
 .spin-once.is-spinning {
-  animation: spin-once 1.8s ease-in-out;
+  animation: spin-once 4s ease-in-out;
 }
 
 @keyframes spin-once {

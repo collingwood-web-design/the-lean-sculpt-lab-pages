@@ -102,11 +102,15 @@
 
   var spinImg = document.querySelector(".spin-once");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (spinImg && !reduceMotion && "IntersectionObserver" in window) {
+  var spunKey = "lsl-styku-spun";
+  var alreadySpun = false;
+  try { alreadySpun = sessionStorage.getItem(spunKey) === "1"; } catch (e) {}
+  if (spinImg && !reduceMotion && !alreadySpun && "IntersectionObserver" in window) {
     var spinObserver = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting) {
         spinImg.classList.add("is-spinning");
         spinObserver.disconnect();
+        try { sessionStorage.setItem(spunKey, "1"); } catch (e) {}
       }
     }, { threshold: 0.5 });
     spinObserver.observe(spinImg);
