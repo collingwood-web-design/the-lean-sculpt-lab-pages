@@ -1239,7 +1239,6 @@ a[href^="tel:"] {
   .has-sub:hover .sub-menu,
   .has-sub:focus-within .sub-menu {
     position: static;
-    display: none;
     min-width: 0;
     padding: 0 0 0 20px;
     background: none;
@@ -1259,6 +1258,10 @@ a[href^="tel:"] {
     font-size: 15px;
     letter-spacing: 0;
     border-left: 0;
+  }
+
+  .sub-menu {
+    display: none;
   }
 
   .sub-menu.is-open {
