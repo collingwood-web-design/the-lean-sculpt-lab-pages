@@ -956,6 +956,19 @@ blockquote {
   align-items: start;
 }
 
+.spin-once.is-spinning {
+  animation: spin-once 1.8s ease-in-out;
+}
+
+@keyframes spin-once {
+  from {
+    transform: perspective(1400px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1400px) rotateY(360deg);
+  }
+}
+
 /* ---------- Payment / consult ---------- */
 
 .qr a {

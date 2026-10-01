@@ -100,6 +100,18 @@
     });
   }
 
+  var spinImg = document.querySelector(".spin-once");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (spinImg && !reduceMotion && "IntersectionObserver" in window) {
+    var spinObserver = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        spinImg.classList.add("is-spinning");
+        spinObserver.disconnect();
+      }
+    }, { threshold: 0.5 });
+    spinObserver.observe(spinImg);
+  }
+
   var dateEl = document.querySelector("[data-copyright-date]");
   if (dateEl) {
     dateEl.textContent = new Date().toLocaleDateString("en-US", {
