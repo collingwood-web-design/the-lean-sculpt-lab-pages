@@ -75,14 +75,7 @@
     });
   });
 
-  var floatBook = document.querySelector(".float-book");
   var footerForm = document.getElementById("contact-form");
-  if (floatBook && footerForm && "IntersectionObserver" in window) {
-    new IntersectionObserver(function (entries) {
-      floatBook.classList.toggle("is-hidden", entries[0].isIntersecting);
-    }).observe(footerForm);
-  }
-
   var successModal = document.getElementById("success-modal");
   if (footerForm && successModal && successModal.showModal) {
     footerForm.addEventListener("cwd-contact:success", function () {
